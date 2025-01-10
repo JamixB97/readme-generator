@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-export const renderLicenseBadge = (license) => {
+function renderLicenseBadge(license) {
   switch (license) {
     case 'MIT':
         return '![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)';
@@ -34,28 +34,28 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-export const renderLicenseSection = (license) => {
-    switch (data.license) {
+function renderLicenseSection(license) {
+    switch (license) {
       case 'MIT':
           return `
-    ## License
+## License
     
-    This project is licensed under the MIT License - see the ${renderLicenseLink(license)} file for details.`;
+This project is licensed under the MIT License - see the ${renderLicenseLink(license)} file for details.`;
       case 'APACHE 2.0':
           return `
-    ## License
+## License
     
-    This project is licensed under the Apache License 2.0 - see the ${renderLicenseLink(license)} file for details.`;
+This project is licensed under the Apache License 2.0 - see the ${renderLicenseLink(license)} file for details.`;
       case 'GPL 3.0':
           return `
-    ## License
+## License
     
-    This project is licensed under the GPL-3.0 License - see the ${renderLicenseLink(license)} file for details.`;
+This project is licensed under the GPL-3.0 License - see the ${renderLicenseLinkd(license)} file for details.`;
       case 'BSD 3':
           return `
-    ## License
+## License
     
-    This project is licensed under the BSD 3-Clause License - see the ${renderLicenseLink(license)} file for details.`;
+This project is licensed under the BSD 3-Clause License - see the ${renderLicenseLink(license)} file for details.`;
       case 'None':
           return '';
   };
@@ -63,9 +63,47 @@ export const renderLicenseSection = (license) => {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `# ${data.name}
 
-`;
+${renderLicenseBadge(data.license)}
+
+## Description
+        
+${data.discription}
+        
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+* [License](#license)
+        
+## Installation
+        
+${data.install}
+        
+## Usage
+        
+${data.usage}
+        
+## Contributing
+        
+${data.contribute}
+
+## Tests
+
+${data.test}
+
+## Questions
+
+[My GitHUb profile](https://github.com/${data.username})
+
+For additional questions email me at ${data.email}
+   
+${renderLicenseSection(data.license)}`;
+
 }
 
 export default generateMarkdown;

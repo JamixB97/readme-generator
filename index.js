@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from 'inquirer';
 import fs from 'fs';
-import { renderLicenseBadge, renderLicenseSection } from './utils/generateMarkdown.js';
+import generateMarkdown from './utils/generateMarkdown.js';
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -65,51 +65,9 @@ function init() {
     inquirer
     .prompt(questions)
     .then((data) => {
-        const readmeContent =
-`# ${data.name}
+        const readmeContent = generateMarkdown(data);
 
-${renderLicenseBadge()}
-
-## Description
-        
-${data.discription}
-        
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-* [License](#license)
-        
-## Installation
-        
-${data.install}
-        
-## Usage
-        
-${data.usage}
-        
-## Contributing
-        
-${data.contribute}
-
-## Tests
-
-${data.test}
-
-## Questions
-
-[My GitHUb profile](https://github.com/${data.username})
-
-For additional questions email me at ${data.email}
-   
-${renderLicenseSection()}`;
-
-    writeToFile('Readme-sample.md', readmeContent);
-
+        writeToFile('sample-README.md', readmeContent);
     });
 };
 
