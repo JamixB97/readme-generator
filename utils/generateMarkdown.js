@@ -20,9 +20,9 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   switch (license) {
     case 'MIT':
-        return '[License](https://opensource.org/licenses/MIT)';
+        return '[License](https://mit-license.org/)';
     case 'APACHE 2.0':
-        return '[License](https://opensource.org/licenses/Apache-2.0)';
+        return '[License](https://www.apache.org/licenses/LICENSE-2.0)';
     case 'GPL 3.0':
         return '[License](https://www.gnu.org/licenses/gpl-3.0.html)';
     case 'BSD 3':
@@ -45,17 +45,17 @@ This project is licensed under the MIT License - see the ${renderLicenseLink(lic
           return `
 ## License
     
-This project is licensed under the Apache License 2.0 - see the ${renderLicenseLink(license)} file for details.`;
+This project is licensed under the Apache 2.0 License - see the ${renderLicenseLink(license)} file for details.`;
       case 'GPL 3.0':
           return `
 ## License
     
-This project is licensed under the GPL-3.0 License - see the ${renderLicenseLinkd(license)} file for details.`;
+This project is licensed under the GPL 3.0 License - see the ${renderLicenseLinkd(license)} file for details.`;
       case 'BSD 3':
           return `
 ## License
     
-This project is licensed under the BSD 3-Clause License - see the ${renderLicenseLink(license)} file for details.`;
+This project is licensed under the BSD 3 License - see the ${renderLicenseLink(license)} file for details.`;
       case 'None':
           return '';
   };
