@@ -50,7 +50,7 @@ This project is licensed under the Apache 2.0 License - see the ${renderLicenseL
           return `
 ## License
     
-This project is licensed under the GPL 3.0 License - see the ${renderLicenseLinkd(license)} file for details.`;
+This project is licensed under the GPL 3.0 License - see the ${renderLicenseLink(license)} file for details.`;
       case 'BSD 3':
           return `
 ## License
