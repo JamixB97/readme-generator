@@ -1,6 +1,6 @@
 # README Generator
 
-![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://mit-license.org/)
 
 ## Description
         
