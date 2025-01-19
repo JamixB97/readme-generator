@@ -1,6 +1,6 @@
 # My Project
 
-![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
+[![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ## Description
         
@@ -29,7 +29,7 @@ This is how you can contribute to this repo
 
 ## Tests
 
-npm run tests
+npm run test
 
 ## Questions
 

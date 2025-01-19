@@ -3,13 +3,13 @@
 function renderLicenseBadge(license) {
   switch (license) {
     case 'MIT':
-        return '![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)';
+        return '[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://mit-license.org/)';
     case 'APACHE 2.0':
-        return '![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)';
+        return '[![Apache License 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)';
     case 'GPL 3.0':
-        return '![GPL License 3.0](https://img.shields.io/badge/license-GPL%203.0-blue.svg)';
+        return '[![GPL License 3.0](https://img.shields.io/badge/license-GPL%203.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)';
     case 'BSD 3':
-        return '![BSD 3-Clause License](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)';
+        return '[![BSD 3-Clause License](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
     case 'None':
         return ''; 
   }
